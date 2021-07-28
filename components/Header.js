@@ -40,7 +40,7 @@ function Header() {
             </Button>
             <img
                 loading="lazy"
-                className="cursor-pointer h-12 w-12 rounded-full ml-2"
+                className="hidden md:inline-flex cursor-pointer h-12 w-12 rounded-full ml-2"
                 src="http://a.abcnews.com/images/Travel/abc_golden_subnosed_monkey_mi_130424_wblog.jpg"
                 alt=""
             />
