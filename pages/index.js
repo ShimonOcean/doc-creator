@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Header from '../components/Header'
+import DocumentRow from '../components/DocumentRow'
 import Icon from "@material-tailwind/react/Icon";
 import Button from '@material-tailwind/react/Button';
 import Image from 'next/image';
@@ -120,16 +121,17 @@ export default function Home() {
             <p className="mr-12">Date Created</p>
             <Icon name="folder" size="3xl" color="gray"/>
           </div>
-        </div>
+        
 
-        {snapshot?.docs.map(doc => (
-          <DocumentRow
-            key={doc.id}
-            id={doc.id}
-            fileName={doc.data().fileName}
-            data={doc.data().timestamp}
-          />
-        ))}
+          {snapshot?.docs.map(doc => (
+            <DocumentRow
+              key={doc.id}
+              id={doc.id}
+              fileName={doc.data().fileName}
+              date={doc.data().timestamp}
+            />
+          ))}
+        </div>
       </section>
     </div>
   )
